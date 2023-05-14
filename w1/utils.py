@@ -112,7 +112,11 @@ class DataReader:
         }
         """
     ######################################## YOUR CODE HERE ##################################################
-
+        with open(self._fp, 'r') as data_reader:
+            _ = next(data_reader)
+            for rows in data_reader:
+                dict_data= {i:j for i,j in zip(self._col_names, rows.strip().split(self._sep))}
+                yield dict_data
     ######################################## YOUR CODE HERE ##################################################
 
     def get_file_path(self):
