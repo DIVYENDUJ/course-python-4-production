@@ -54,7 +54,7 @@ class DB:
                 end_time text DEFAULT NULL,
                 percentage real DEFAULT NULL)''')
 
-        self._connection.commit()    
+        
     ######################################## YOUR CODE HERE ##################################################
 
     def insert(self, process_id, start_time, file_name=None, file_path=None,
@@ -81,7 +81,7 @@ class DB:
             end_time,
             percentage) VALUES
             (?,?,?,?,?,?,?)''', (process_id,file_name,file_path,description,start_time,end_time,percentage))
-            
+        self._connection.commit()        
     ######################################## YOUR CODE HERE ##################################################
 
     def read_all(self) -> List[Dict]:
