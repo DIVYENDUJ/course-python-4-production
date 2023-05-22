@@ -49,7 +49,7 @@ def revenue_per_region(dp: DataProcessor) -> Dict:
         if row['Country'] in revenue_per_region_dict:
             revenue_per_region_dict[row['Country']] += float(row['TotalPrice'])
         else:
-            revenue_per_region_dict[row['Country']] = 0.0
+            revenue_per_region_dict[row['Country']] = float(row['TotalPrice'])
     return revenue_per_region_dict
     ######################################## YOUR CODE HERE ##################################################
 
