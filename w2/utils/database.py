@@ -80,13 +80,8 @@ class DB:
             start_time,
             end_time,
             percentage) VALUES
-            (?,?,?,?,?,?,?)''', (process_id,
-            file_name,
-            file_path,
-            description,
-            start_time,
-            end_time,
-            percentage))
+            (?,?,?,?,?,?,?)''', (process_id,file_name,file_path,description,start_time,end_time,percentage))
+            
     ######################################## YOUR CODE HERE ##################################################
 
     def read_all(self) -> List[Dict]:
