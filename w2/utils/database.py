@@ -87,9 +87,6 @@ class DB:
             start_time,
             end_time,
             percentage))
-
-        self._connection.commit()    
-
     ######################################## YOUR CODE HERE ##################################################
 
     def read_all(self) -> List[Dict]:
