@@ -162,11 +162,11 @@ def main() -> List[Dict]:
     file_paths = [os.path.join(data_folder_path, file_name) for file_name in files]
 
     batches = batch_files(file_paths=file_paths, n_processes=n_processes)
-
+    #week3 changes
     ######################################## YOUR CODE HERE ##################################################
     with multiprocessing.Pool(processes=n_processes) as pool:
         revenue_data = pool.starmap(run, [(batch, np) for np, batch in enumerate(batches)])
-        revenue_data=flatten(lst=revenue_data)
+        revenue_data = flatten(lst=revenue_data)
         pool.close()
         pool.join() 
     ######################################## YOUR CODE HERE ##################################################
