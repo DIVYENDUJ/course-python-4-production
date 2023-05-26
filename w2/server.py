@@ -55,7 +55,8 @@ async def get() -> HTMLResponse:
     ######################################## YOUR CODE HERE ##################################################
     with open('index.html') as file:
         item = file.read()
-        return HTMLResponse(content=item)
+    
+    return HTMLResponse(content=item,status_code=200)
     ######################################## YOUR CODE HERE ##################################################
 
 
@@ -68,5 +69,5 @@ async def get() -> List[ProcessStatus]:
     ######################################## YOUR CODE HERE ##################################################
     dba=DB()
     lst=dba.read_all()
-    return [ProcessStatus(**kwa) for kwa in lst]  ### -> kwargs as pydantic frmwrk
+    return [ProcessStatus(**kwa) for kwa in lst] ### -> kwargs as pydantic frmwrk
     ######################################## YOUR CODE HERE ##################################################

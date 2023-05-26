@@ -52,7 +52,7 @@ class DB:
                 description text DEFAULT NULL,
                 start_time text NOT NULL,
                 end_time text DEFAULT NULL,
-                percentage real DEFAULT NULL)''')
+                percentage real DEFAULT NULL);''')
 
         
     ######################################## YOUR CODE HERE ##################################################
